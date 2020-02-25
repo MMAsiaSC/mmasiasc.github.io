@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en-US"
+      class="js flexbox webgl no-touch geolocation hashchange history websockets rgba hsla multiplebgs backgroundsize borderimage textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage applicationcache svg svgclippaths mediaqueries no-regions supports gr__acmmm_org"
+      style=""><!--<![endif]-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Regular Paper Arrangement - ACM Multimedia Asia 2019 Beijing, China</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--[if IE]>
+    <link rel="shortcut icon" href="http://www.acmmmasia.org/wp-content/themes/acmmm15/favicon.ico">
+    <![endif]-->
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/11.2.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {"concatemoji": "https:\/\/www.acmmm.org\/2019\/wp-includes\/js\/wp-emoji-release.min.js"}
+        };
+        !function (a, b, c) {
+            function d(a, b) {
+                var c = String.fromCharCode;
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0);
+                var d = k.toDataURL();
+                l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0);
+                var e = k.toDataURL();
+                return d === e
+            }
+
+            function e(a) {
+                var b;
+                if (!l || !l.fillText) return !1;
+                switch (l.textBaseline = "top", l.font = "600 32px Arial", a) {
+                    case"flag":
+                        return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b);
+                    case"emoji":
+                        return b = d([55358, 56760, 9792, 65039], [55358, 56760, 8203, 9792, 65039]), !b
+                }
+                return !1
+            }
+
+            function f(a) {
+                var c = b.createElement("script");
+                c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c)
+            }
+
+            var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d");
+            for (j = Array("flag", "emoji"), c.supports = {
+                everything: !0,
+                everythingExceptFlag: !0
+            }, i = 0; i < j.length; i++) c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]);
+            c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () {
+                c.DOMReady = !0
+            }, c.supports.everything || (h = function () {
+                c.readyCallback()
+            }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () {
+                "complete" === b.readyState && c.readyCallback()
+            })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <script src="src/js/wp-emoji-release.min.js" type="text/javascript"
+            defer=""></script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel="stylesheet" id="wp-block-library-css" href="src/css/style.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="bones-stylesheet-css" href="src/css/style.css" type="text/css" media="all">
+    <!--[if lt IE 9]>
+    <link rel='stylesheet' id='bones-ie-only-css' href='src/css/ie.css' type='text/css' media='all'/>
+    <![endif]-->
+    <link rel="stylesheet" id="bones-fontawesome-css" href="src/css/font-awesome.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="colorbox-css" href="assets/colorbox.css" type="text/css" media="all">
+    <link rel="stylesheet" id="fontawesome-css" href="src/css/fontawesome.css" type="text/css" media="all">
+
+
+    <script type="text/javascript" src="src/js/jquery.js"></script>
+    <script type="text/javascript" src="src/js/jquery-migrate.min.js"></script>
+    <script type="text/javascript" src="src/js/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="src/js/gallery.js"></script>
+    <script type="text/javascript" src="assets/colorbox.js"></script>
+    <script type="text/javascript" src="src/js/jquery-ui.js"></script>
+
+    <link rel="icon" href="src/img/ACMMM19_Browserlogo_plain-32x32.png" sizes="32x32">
+    <link rel="icon" href="src/img/ACMMM19_Browserlogo_plain-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon-precomposed" href="src/img/ACMMM19_Browserlogo_plain-180x180.png">
+    <meta name="msapplication-TileImage" content="src/img/ACMMM19_Browserlogo_plain-270x270.png">
+
+</head>
+
+<body class="home page-template-default page page-id-7 do-etfw" data-gr-c-s-loaded="true">
+
+<div id="container">
+
+    <header class="header" role="banner">
+
+        <div id="inner-header" class="wrap cf page-header">
+
+            <p id="logo" class="h1">
+                <a href="http://www.acmmmasia.org" rel="nofollow">
+                    <img src="src/img/logo_2019.png" alt="ACM Multimedia Asia 2019 Logo and Home Link">
+                </a>
+            </p>
+
+            <h1><span class="red">ACM</span>Multimedia Asia 2019</h1>
+            <h2>16 - 18 December 2019, Beijing, China</h2>
+        </div>
+
+    </header>
+
+    <nav role="navigation">
+        <h3 class="navheader slide-trigger">Menu <span class="fa fa-bars"></span></h3>
+
+        <ul id="menu-home" class="nav top-nav cf">
+            <li id="menu-item-20"
+                class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-20">
+                <a href="http://www.acmmmasia.org/" aria-current="page">Home</a>
+            </li>
+            <li id="menu-item-13" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-13">
+                <a href="./important-dates.html">Important Dates</a></li>
+            <li id="menu-item-234"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-234">
+                <a href="./submission.html">Calls for Submission</a>
+                <ul class="sub-menu">
+                    <li id="menu-item-353"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./submission.html">Call for Papers</a>
+                    </li>
+                    <li id="menu-item-521"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521">
+                        <a href="./doctoralContributions.html">Doctoral Symposium</a>
+                    </li>
+                    <li id="menu-item-518"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518">
+                        <a href="./proposals.html">Multimedia Grand Challenges</a>
+                    </li>
+                    <li id="menu-item-519"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519">
+                        <a href="./panelProposals.html">Panels</a>
+                    </li>
+                    <li id="menu-item-520"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520">
+                        <a href="./tutorials.html">Tutorials</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520">
+                        <a href="./braveNewideas.html">Brave New Ideas</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520">
+                        <a href="./technicalDemos.html">Technical Demos Program</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520">
+                        <a href="./workshop.html">Workshop Proposals</a>
+                    </li>
+
+                    <!--                    <li id="menu-item-462"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-462"><a-->
+                    <!--                            href="http://www.acmmmasia.org/multimedia-art/">Multimedia Art</a></li>-->
+                    <!--                    <li id="menu-item-399"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-399"><a-->
+                    <!--                            href="http://www.acmmmasia.org/multimedia-grand-challenges/">Multimedia Grand-->
+                    <!--                        Challenges</a></li>-->
+                    <!--                    <li id="menu-item-485"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-485"><a-->
+                    <!--                            href="http://www.acmmmasia.org/call-for-open-source-software-competition/">Open Source-->
+                    <!--                        Software Competition</a></li>-->
+                    <!--                    <li id="menu-item-519"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a-->
+                    <!--                            href="http://www.acmmmasia.org/call-for-panels/">Panel Proposals</a></li>-->
+                    <!--                    <li id="menu-item-398"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398"><a-->
+                    <!--                            href="http://www.acmmmasia.org/reproducibility-cfp/">Reproducibility CfP</a></li>-->
+                    <!--                    <li id="menu-item-517"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-517"><a-->
+                    <!--                            href="http://www.acmmmasia.org/technical-demos-and-videos-program/">Technical Demos and-->
+                    <!--                        Videos Program</a></li>-->
+                    <!--                    <li id="menu-item-520"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-520"><a-->
+                    <!--                            href="http://www.acmmmasia.org/call-for-tutorials/">Tutorials</a></li>-->
+                    <!--                    <li id="menu-item-378"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-378"><a-->
+                    <!--                            href="http://www.acmmmasia.org/accepted-workshops/">Workshops</a></li>-->
+                </ul>
+            </li>
+            <li id="menu-item-235"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-234">
+                <a href="./multimedia-grand-challenges.html">Program</a>
+                <ul class="sub-menu">
+                    <li id="menu-item-356"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./files/ACMMMASIA2019-Program.pdf">Program Schedule（PDF）</a>
+                    </li>
+                    <li id="menu-item-357"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./at-a-glance.html">Program At A Glance</a>
+                    </li>
+                    <li id="menu-item-358"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./tutorial.html">Tutorials</a>
+                    </li>
+                    <li id="menu-item-359"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./multimedia-grand-challenges.html">Multimedia Grand Challenges</a>
+                    </li>
+                    <li id="menu-item-360"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./keynotes.html">Keynotes</a>
+                    </li>
+                    <li id="menu-item-361"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./regularPaperArrangement.html">Regular Paper Arrangement</a>
+                    </li>
+                    <li id="menu-item-362"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./presentationInstructions.html">Presentation Instructions</a>
+                    </li>
+                    <li id="menu-item-363"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+                        <a href="./panel.html">Panel</a>
+                    </li>
+                </ul>
+            </li>
+            <li id="menu-item-15"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-15"><a
+            >Attendee Information</a>
+                <ul class="sub-menu">
+                    <li id="menu-item-160"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="https://www.zhculture.cn/ACMMMAsia2019/registration/Registration.asp">Registration</a>
+                    </li>
+                    <li id="menu-item-161"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="./conferenceVenue.html">Conference Venue</a></li>
+                    <li id="menu-item-162"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="./accommodations.html">Accommodations</a></li>
+                    <li id="menu-item-163"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="./aboutBeijing.html">About Beijing</a></li>
+                    <li id="menu-item-164"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="./sightseeing.html">Sightseeing</a></li>
+                    <li id="menu-item-165"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="./visa.html">Visa&Letter</a></li>
+                    <li id="menu-item-166"
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-160"><a
+                            href="./lunch.html">Lunch Information</a></li>
+                </ul>
+            </li>
+            <li id="menu-item-14"
+                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-14"><a
+                    href="./organization.html">Organization</a>
+                <ul class="sub-menu">
+                    <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22">
+                        <a href="./organization.html">Organizing Committee</a></li>
+                    <!--                    <li id="menu-item-317"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-317"><a-->
+                    <!--                            href="http://www.acmmmasia.org/reviewer-guidelines/">Reviewer Guidelines</a></li>-->
+                    <!--                    <li id="menu-item-354"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354"><a-->
+                    <!--                            href="http://www.acmmmasia.org/call-for-volunteers/">Call for Volunteer Area Chairs and-->
+                    <!--                        Reviewers</a></li>-->
+                    <!--                    <li id="menu-item-319"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-319"><a-->
+                    <!--                            href="http://www.acmmmasia.org/multimedia-grand-challenge-proposals/">Multimedia Grand-->
+                    <!--                        Challenge Proposals</a></li>-->
+                    <!--                    <li id="menu-item-235"-->
+                    <!--                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-235"><a-->
+                    <!--                            href="http://www.acmmmasia.org/call-for-workshops/">Workshop Proposals</a></li>-->
+                </ul>
+            </li>
+            <!--            <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-434"><a-->
+            <!--                    href="http://www.acmmmasia.org/sponsorship/">Sponsorship</a></li>-->
+        </ul>
+    </nav>
+    <div id="banner_img">
+        <!--        <img src="src/img/ACMMM19_BaiedesAnges-1024x128.png" alt="Baie des Anges, French Riviera">-->
+        <img src="src/img/test_2.jpg" alt="Baie des Anges, French Riviera">
+    </div>
+
+
+    <div id="content">
+
+        <div id="inner-content" class="wrap cf">
+
+            <div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
+                <article class="entry-content" id="post-67" role="article" itemscope=""
+                         itemtype="http://schema.org/BlogPosting">
+                    <h1 class="page-title" itemprop="headline">Regular Paper Arrangement</h1>
+
+                    <br>
+                    <p class="has-medium-font-size"><strong>Best Paper Session</strong></p>
+                    <p>Time: 2019/12/17 10:30~12:00, Location: Auditorium
+                        <br>
+                        <strong>Session Chair: Wen-Huang Cheng</strong>
+                    </p>
+
+                    <ul>
+                        <li>
+                            <strong>
+                                Efficient Dense Modules of Asymmetric Convolution for Real-Time Semantic Segmentation
+                                (43)
+                            </strong>
+                            <p>
+                                Shao-Yuan Lo (National Chiao Tung University); Hsueh-Ming Hang (National Chiao Tung
+                                University); Sheng-Wei Chan (Industrial Tech Research Inst.); Jing-Jhih Lin (Industrial
+                                Tech Research Inst.)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Adaptive Bilinear Pooling for Fine-grained Representation Learning (39)
+                            </strong>
+                            <p>
+                                Shaobo Min (University of Science and Technology of China); Youliang Tian (Guizhou
+                                University);
+                                Hongtao Xie (University of Science and Technology of China); Hantao Yao ( Institute of
+                                Automation,
+                                Chinese Academy of Sciences); Yongdong Zhang (University of Science and Technology of
+                                China)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Weakly Supervised Video Summarization by Hierarchical Reinforcement Learning (91)
+                            </strong>
+                            <p>
+                                Yiyan Chen (The University of Tokyo); Li Tao (The University of Tokyo); Xueting Wang
+                                (The University
+                                of Tokyo); Toshihiko Yamasaki (The University of Tokyo)
+
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Semantic Prior Guided Face Inpainting (164)
+                            </strong>
+                            <p>
+                                Zeyang Zhang (College of Electronics and Information Engineering, Tongji University);
+                                Xiaobo Zhou
+                                (College of Electronics and Information Engineering, Tongji University); Xiaoyan Zhang
+                                (College of
+                                Computer Science and Software Engineering, Shenzhen University)
+                            </p>
+                        </li>
+                    </ul>
+
+
+                    <hr>
+                    <br>
+                    <p class="has-medium-font-size"><strong>Oral Session 1: Multimedia Search</strong></p>
+                    <p>Time: 2019/12/17 14:00~15:30, Location: 301AB
+                    <br>
+                        <strong>Session Chair:  Weiqing Min</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>
+                                Attention-Aware Feature Pyramid Ordinal Hashing for Image Retrieval (99)
+                            </strong>
+                            <p>
+                                Xie Sun (Nanjing University of Science and Technology ); Lu Jin (Nanjing University of
+                                Science and Technology ); Zechao Li (Nanjing University of Science and Technology)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Measuring Similarity between Brands using Social Media Content (40)
+                            </strong>
+                            <p>
+                                Yiwei Zhang (The University of Tokyo); Xueting Wang (The University of Tokyo); Yoshiaki
+                                Sakai (Geomarketing Co.,Ltd.); Toshihiko Yamasaki (The University of Tokyo)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Social Font Search by Multimodal Feature Embedding (146)
+                            </strong>
+                            <p>
+                                Saemi Choi (University of Tokyo); Shun Matsumura (The University of Tokyo); Kiyoharu
+                                Aizawa (The University of Tokyo)
+
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Video Summarization based on Sparse Subspace Clustering with Automatically Estimated
+                                Number of Clusters (150)
+                            </strong>
+                            <p>
+                                Pengyi Hao (Zhejiang University of Technology); Edwin Manhando (Zhejiang University of
+                                Science and Technology); Taotao Ye (Zhejiang University of Technology); Cong Bai
+                                (Zhejiang University of Technology)
+                            </p>
+                        </li>
+                    </ul>
+
+                    <hr>
+                    <br>
+                    <p class="has-medium-font-size"><strong>Oral Session 2: Multimedia Service</strong></p>
+                    <p>Time: 2019/12/17 16:00~17:30 Location: 301AB
+                        <br>
+                        <strong>Session Chair:  Toshihiko Yamasaki</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>
+                                Multiple Fisheye Camera Tracking via Real-Time Feature Clustering (46)
+                            </strong>
+                            <p>
+                                Chon Hou Sio (National Chiao Tung University); Hong-Han Shuai (National Chiao Tung
+                                University); Wen-Huang Cheng (EE, NCTU)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Salient Time Slice Pruning and Boosting for Person-Scene Instance Search in TV Series
+                                (41)
+                            </strong>
+                            <p>
+                                Zheng Wang (National Institute of Informatics); Fan Yang (The University of Tokyo);
+                                Shin'ichi Satoh (National Institute of Informatics)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Stop Hiding Behind Windshield: A Windshield Image Enhancer Based on a Two-way Generative
+                                Adversarial Network (81)
+                            </strong>
+                            <p>
+                                Chi-Rung Chang (NCTU); Kuan-Yu Lung (NCTU); Yi-Chung Chen (NCTU); Zhi-Kai Huang (NCTU);
+                                Hong-Han Shuai (National Chiao Tung University); Wen-Huang Cheng (EE, NCTU)
+
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                A Performance-Aware Selection Strategy for Cloud-based Video Services with Micro-Service
+                                Architecture (76)
+                            </strong>
+                            <p>
+                                Zhengjun Xu (Beijing University of Posts and Telecommunications); Haitao Zhang (Beijing
+                                University of Posts and Telecommunications); Han Huang (Beijing University of Posts and
+                                Telecommunications)
+                            </p>
+                        </li>
+                    </ul>
+
+                    <hr>
+                    <br>
+                    <p class="has-medium-font-size"><strong>Oral Session 3: Human Analysis in Multimedia</strong></p>
+                    <p>Time: 2019/12/18 14:00~15:30, Location: 301AB
+                        <br>
+                        <strong>Session Chair:  Bing-Kun Bao</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>
+                                Dense Attention Network for Facial Expression Recognition in the Wild (184)
+                            </strong>
+                            <p>
+                                Cong Wang (University of Chinese Academy of Sciences); Ke Lu (University of Chinese
+                                Academy of Sciences); Jian Xue (University of Chinese Academy of Sciences); Yanfu Yan
+                                (University of Chinese Academy of Sciences)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Make Skeleton-based Action Recognition Model Smaller, Faster and Better (23)
+                            </strong>
+                            <p>
+                                Fan Yang (Nara Institute of Science and Technology / RIKEN AIP); Yang Wu (Kyoto University);
+                                Sakriani Sakti (Nara Institute of Science and Technology / RIKEN AIP); Satoshi Nakamura
+                                (Nara Institute of Science and Technology / RIKEN AIP)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                A Cascade Sequence-to-Sequence Model for Chinese Mandarin Lip Reading (56)
+                            </strong>
+                            <p>
+                                Ya Zhao (Zhejiang University); Rui Xu (Zhejiang University); Mingli Song (Zhejiang
+                                University)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Learn to Gesture: Let Your Body Speak (80)
+                            </strong>
+                            <p>
+                                Tian Gan (Shandong University); Zhixin Ma (Shandong University); Yuxiao Lu (Shandong
+                                University); Xuemeng Song (Shandong University); Liqiang Nie (Shandong University)
+                            </p>
+                        </li>
+                    </ul>
+
+                    <hr>
+                    <br>
+                    <p class="has-medium-font-size"><strong>Oral Session 4: Vision in Multimedia</strong></p>
+                    <p>Time: 2019/12/18 16:00~17:30, Location: 301AB
+                        <br>
+                        <strong>Session Chair:  Hsueh-Ming Hang</strong>
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>
+                                Multi-Dilation Network for Crowd Counting (63)
+                            </strong>
+                            <p>
+                                Shuheng Wang (Tongji University); Hanli Wang (Tongji University); Qinyu Li (Tongji
+                                University)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Excluding the Misleading Relatedness Between Attributes in Multi-Task Attribute
+                                Recognition Network (113)
+                            </strong>
+                            <p>
+                                Sirui Cai ( Shanghai University); Yuchun Fang (Shanghai University)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Robust Visual Tracking via Statistical Positive Sample Generation and Gradient Aware
+                                Learning (60)
+                            </strong>
+                            <p>
+                                Lijian Lin (Xiamen University); Haosheng Chen (Xiamen University); Yanjie Liang (Xiamen
+                                University); Yan Yan (Xiamen University); Hanzi Wang (Xiamen University)
+                            </p>
+                        </li>
+                        <li>
+                            <strong>
+                                Exploring Semantic Segmentation on the DCT Representation (42)
+                            </strong>
+                            <p>
+                                Shao-Yuan Lo (National Chiao Tung University); Hsueh-Ming Hang (National Chiao Tung
+                                University)
+                            </p>
+                        </li>
+                    </ul>
+
+
+                    <hr>
+                    <br>
+                    <p class="has-medium-font-size"><strong>Poster Session 1</strong></p>
+                    <p>Time: 2019/12/17 15:30~16:30, Location: 302AB
+                        <br>
+                        <strong>Session Chair:  Tian Gan</strong>
+                    </p>
+                    <ul>
+                        <li><strong>Residual Graph Convolutional Networks for Zero-Shot Learning (62)</strong>
+                            <p>Jiwei Wei (University of Electronic Science and Technology of China); Yang Yang
+                                (University of Electronic Science and Technology of China); Jingjing Li (University of
+                                Electronic Science and Technology of China); Lei Zhu (Shandong Normal Unversity); Lin
+                                Zuo (University of Electronic Science and Technology of China); Heng Tao Shen
+                                (University of Electronic Science and Technology of China (UESTC))</p></li>
+                        <li><strong>L0 Gradient Smoothing and Bimodal Histogram Analysis: A Robust Method for
+                            Sea-sky-line Detection (38)</strong>
+                            <p>Jian Jiao (Fudan University); Zijian Wang (Fudan University); Hong Lu (Fudan
+                                University)</p></li>
+                        <li><strong>Deep Distillation Metric Learning (24)</strong>
+                            <p>Jiaxu Han (Tianjin University); Tianyu Zhao (Tianjin University); Changqing Zhang
+                                (Tianjin university)</p></li>
+                        <li><strong>Self-balance motion and appearance model for multi-object tracking in UAV
+                            (98)</strong>
+                            <p>Hongyang Yu (Harbin Institute of Technology); Guorong Li (University of Chinese Academy
+                                of Sciences); Weigang Zhang (Harbin Institute of Technology, Weihai); Hongxun Yao
+                                (Harbin Institute of Technology); Qingming Huang (University of Chinese Academy of
+                                Sciences) </p></li>
+                        <li><strong>Deep Spherical Gaussian Illumination Estimation for Indoor Scene (92)</strong>
+                            <p>Mengtian Li (Nanjing University); Jie Guo (Nanjing University); Xiufen Cui (Samsung
+                                Electronics (China）R&D Center); Rui Pan (Samsung Electronics (China）R&D Center); Yanwen
+                                Guo (Nanjing University); Chenchen Wang (Nanjing University); Piaopiao Yu (Nanjing
+                                University); Fei Pan (Nanjing University)</p></li>
+                        <li><strong>NRQQA: A No-Reference Quantitative Quality Assessment Method for Stitched Images
+                            (116)</strong>
+                            <p>shengju yu (Huazhong University of Science and Technology); XiaoYu Xu (Huazhong
+                                University of Science and Technology); hao tao (HuaZhong University of science and
+                                technology); Li Yu (HUST); yixuan wang (HuaZhong University of science and
+                                technology)</p></li>
+                        <li><strong>Gradient Guided Image Deblocking Using Convolutional Neural Networks (19)</strong>
+                            <p>Jiawei Feng (Xidian University); Cheolkon Jung (Xidian University); Zhu Li (University of
+                                Missouri, Kansas City)</p></li>
+                        <li><strong>Color Recovery from Multi-Spectral NIR Images Using Gray Information (90)</strong>
+                            <p>Qingtao Fu (Xidian University); Cheolkon Jung (Xidian University)</p></li>
+                        <li><strong>An EERM Efficient Parameter Optimization Algorithm and Its Application to Image
+                            Denoising (117)</strong>
+                            <p>yinhao liu (Hangzhou Dianzi University); mengting fan (China Jiliang University);
+                                Xiaofeng Huang (xfhuang@hdu.edu.cn); Haibing Yin (Hangzhou Dianzi University)</p></li>
+                        <li><strong>WaveCSN: Cascade Segmentation Network for Hip Landmark Detection (64)</strong>
+                            <p>Hai Wu (University of Science and Technology of China); Hongtao Xie (University of
+                                Science and Technology of China); Fanchao Lin (University of Science and Technology of
+                                China); Sicheng Zhang (Anhui Provincial Children's Hospital); Jun Sun (Anhui Provincial
+                                Children's Hospital); Yongdong Zhang (University of Science and Technology of China)</p>
+                        </li>
+                        <li><strong>Shifted Spatial-Spectral Convolution for Deep Neural Networks (50)</strong>
+                            <p>Yuhao Xu (The University of Tokyo); Hideki Nakayama (The University of Tokyo)</p></li>
+                        <li><strong>Multi-Scale Invertible Network for Image Super-Resolution (57)</strong>
+                            <p>Zhuangzi Li (School of Computer and Information Engineering, Beijing Technology and
+                                Business University); Shanshan Li (Beijing Technology and Business University); Naiguang
+                                Zhang (Information Technology Institute, Academy of Broadcasting Science); Lei Wang
+                                (Academy of Broadcasting Science, SAPPRFT); Ziyu Xue (Information Technology Institute,
+                                Academy of Broadcasting Science, SART) </p></li>
+                        <li><strong>Feature fusion adversarial learning network for liver lesion classification
+                            (26)</strong>
+                            <p>peng chen (jiangsu university); Yuqing Song (JIANGSU UNIVERSITY); Zhe Liu (Jiangsu
+                                University); Deqi Yuan (Zhenjiang First People’s Hospital Branch) </p></li>
+                        <li><strong>Fast and Accurately Measuring Crack Width via Cascade Principal Component Analysis
+                            (66)</strong>
+                            <p>HuiLing GENG (Beijing University of Technology)</p></li>
+                        <li><strong>Active Perception Network for Salient Object Detection (94)</strong>
+                            <p>Jun Wei (Institute of Computing Technology, Chinese Academy of Sciences); Shuhui Wang
+                                (VIPL,ICT,Chinese academic of science); Liang Li (Chinese Academy of Sciences); Qingming
+                                Huang (University of Chinese Academy of Sciences)</p></li>
+                        <li><strong>Surface Normal Data Guided Depth Recovery with Graph Laplacian Regularization
+                            (100)</strong>
+                            <p>Longhua Sun (Beijing University of Technology); Jin Wang (Beijing University of
+                                Technology); Yunhui Shi (Beijing University of Technology); Qing Zhu (Beijing University
+                                of Technology); Baocai Yin ( Dalian University of Technology)</p></li>
+                        <li><strong>An Adaptive Dark Region Detail Enhancement Method for Low-light Images
+                            (108)</strong>
+                            <p>Wengang Cheng (North China Electric Power University); Caiyun Guo (North China Electric
+                                Power University); Haitao Hu (North China Electric Power University)</p></li>
+                    </ul>
+
+
+                    <hr>
+                    <br>
+                    <p class="has-medium-font-size"><strong>Poster Session 2</strong></p>
+                    <p>Time: 2019/12/18 15:30~16:30, Location: 302AB
+                        <br>
+                        <strong>Session Chair:  Cong Bai</strong>
+                    </p>
+                    <ul>
+                        <li><strong>Deep Structural Feature Learning: Vehicle Re-Identification In Structure-Aware Map
+                            Space (58)</strong>
+                            <p>Wenqian Zhu (Wuhan University); Ruimin Hu (Wuhan University); Zhongyuan Wang (National
+                                Engineering Research Center for Multimedia Software, Wuhan University, China); Dengshi
+                                Li (Jianghan University); Xiyue Gao (Wuhan Univ.)</p></li>
+                        <li><strong>Selective Attention Network for Single Image Dehazing and Deraining (173)</strong>
+                            <p>Xiao Liang (School of Computer Science and Engineering, Nanjing University of Science and
+                                Technology); runde li (Nanjing University of Science & Technology); Jinshan Pan (Nanjing
+                                University of Science and Technology); Jinhui Tang (Nanjing University of Science and
+                                Technology)</p></li>
+                        <li><strong>Manifold Alignment with Multi-graph Embedding (87)</strong>
+                            <p>Chang-Bin Huang (Jiangsu University); Timothy Apasiba Abeo (Jiangsu University);
+                                Xiang-Jun Shen (Jiangsu University)</p></li>
+                        <li><strong>Multi-Label Image Classification with Attention Mechanism and Graph Convolutional
+                            Networks (119)</strong>
+                            <p>Quanling Meng (Harbin Institute of Technology, Weihai); Weigang Zhang (Harbin Institute
+                                of Technology, Weihai)</p></li>
+                        <li><strong>RSC-DGS: Fusion of RGB and NIR Images Using Robust Spectral Consistency and Dynamic
+                            Gradient Sparsity (20)</strong>
+                            <p>Shengtao Yu (Huawei Technologies); Cheolkon Jung (Xidian University)</p></li>
+                        <li><strong>Multi-Feature Fusion for Multimodal Attentive Sentiment Analysis (103)</strong>
+                            <p>Man A (Yunnan University); Pu yuanyuan (yunnan university); Dan Xu (Yunnan University);
+                                Wenhua Qian (Yunnan University); Zhengpeng Zhao (Yunnan University); Qiuxia Yang (Yunnan
+                                University)</p></li>
+                        <li><strong>Multimodal Attribute and Feature Embedding for Activity Recognition (168)</strong>
+                            <p>Weiming Zhang (Beijing Jiaotong University); Yi Huang (Chinese Academy of Sciences);
+                                WanTing Yu (Beijing Jiaotong University); XiaoShan Yang (Chinese Academy of Sciences);
+                                JiTao Sang (Beijing Jiaotong University)</p></li>
+                        <li><strong>Representative Feature Matching Network for Image Retrieval (31)</strong>
+                            <p>Zhuangzi Li (School of Computer and Information Engineering, Beijing Technology and
+                                Business University); Feng Dai (Beijing Technology and Business University); Naiguang
+                                Zhang (Information Technology Institute, Academy of Broadcasting Science); Lei Wang
+                                (Academy of Broadcasting Science, SAPPRFT); Ziyu Xue (Information Technology Institute,
+                                Academy of Broadcasting Science, SART) </p></li>
+                        <li><strong>Deep Feature Interaction Embedding for Pair Matching Prediction (93)</strong>
+                            <p>Luwei Zhang (The University of Tokyo); Xueting Wang (The University of Tokyo); Toshihiko
+                                Yamasaki (The University of Tokyo)</p></li>
+                        <li><strong>Multi-source User Attribute Inference based on Hierarchical Auto-encoder
+                            (67)</strong>
+                            <p>Boyu Zhang (Beijing Jiaotong University); Xiangguo Ding (Beijing Jiaotong University);
+                                Xiaowen Huang (National Laboratory of Pattern Recognition, Institute of Automation,
+                                Chinese Academy of Sciences,); Jitao Sang (Beijing Jiaotong University, China); Jian Yu
+                                (Beijing Jiaotong University)</p></li>
+                        <li><strong>Comprehensive Event Storyline Generation from Microblogs (48)</strong>
+                            <p>wenjin sun (Beijing Jiaotong University); yuhang wang (Beijing Jiaotong University); Yuqi
+                                Gao (Nanjing University); Jitao Sang (Beijing Jiaotong University, China); Jian Yu
+                                (Beijing Jiaotong University)</p></li>
+                        <li><strong>Domain specific and idiom adaptive video summarization (34)</strong>
+                            <p>Yi Dong (Nanyang Technological University); Chang Liu (Nanyang Technological University);
+                                Zhiqi Shen (NTU); Zhanning Gao (Alibaba Group); Pan Wang (Alibaba Group); Changgong
+                                Zhang (Alibaba Group); Peiran Ren (Alibaba Group); Xuansong Xie (Alibaba); Han Yu
+                                (Nanyang Technological University (NTU)); Qingming Huang (University of Chinese Academy
+                                of Sciences)</p></li>
+                        <li><strong>An Automated Lung Nodule Segmentation Method Based On Nodule Detection Network and
+                            Region Growing (169)</strong>
+                            <p>Yanhao Tan (University of Chinese Academy of Sciences); Ke Lu (University of Chinese
+                                Academy of Sciences); Jian Xue (University of Chinese Academy of Sciences)</p></li>
+                        <li><strong>Food Photo Enhancement with Single Domain Generative Adversarial Networks
+                            (47)</strong>
+                            <p>Shudan Wang (University of Science and Technology Beijing); Liang Sun (University of
+                                Science and Technology Beijing); Weiming Dong (NLPR, Institute of Automation, Chinese
+                                Academy of Sciences); Yong Zhang (Tencent AI Lab) </p></li>
+                        <li><strong>Generalizing Rate Control Strategies for Real-time Video Streaming via Learning from
+                            Deep Learning (25)</strong>
+                            <p>Tianchi Huang (Tsinghua University); Ruixiao Zhang (Tsinghua University); Chenglei Wu
+                                (Tsinghua University); Xin Yao (Tsinghua University); Chao Zhou (Beijing Kuaishou
+                                Technology Co., Ltd); Bing Yu ( Beijing Kuaishou Technology Co., Ltd); Lifeng Sun
+                                (Tsinghua University)</p></li>
+                        <li><strong>IKDMM: Iterative Knowledge Distillation Mask Model for Robust Acoustic Beamforming
+                            (65)</strong>
+                            <p>Zhaoyi Liu (Peking university); Yuexian Zou (Peking University)</p></li>
+                        <li><strong>Multi-Objective Particle Swarm Optimization for ROI based Video Coding (77)</strong>
+                            <p>Guangjie Ren (Wuhan University); Feiyang Liu (Wuhan University); Daiqin Yang (Wuhan
+                                University); Yiyong Zha (Tencent); Yunfei Zhang (Tencent); Xin Liu (Tencent)</p></li>
+                        <li><strong>An LSTM based rate and distortion prediction method for low-delay video coding
+                            (69)</strong>
+                            <p>Feiyang Liu (Wuhan University); Guiyan Cao (Wuhan University); Daiqin Yang (Wuhan
+                                University); Yiyong Zha (Tencent); Yunfei Zhang (Tencent); Xin Liu (Tencent)</p></li>
+                        <li><strong>Chaos to Order, Can GANs Make It? (22)</strong>
+                            <p>Sanbi Luo (Institute of Information Engineering,Chinese Academy of Sciences)); Tao Guo
+                                (Institute of Information Engineering,Chinese Academy of Sciences), Jizhong Han
+                                (Institute of Information Engineering,Chinese Academy of Sciences); Yonggang Huang
+                                (Beijing Institue of Technology)</p></li>
+                    </ul>
+
+                </article>
+
+            </div>
+
+            <div id="sidebar1" class="sidebar m-all t-1of3 d-2of7 last-col cf" role="complementary">
+
+
+                <div id="custom_html-2" class="widget_text widget widget_custom_html">
+                    <h4 class="widgettitle">Supporters</h4>
+                    <div class="textwidget custom-html-widget">
+                        <a href="https://www.acm.org/" target="_blank"
+                           style="text-decoration: none !important; border: 0 !important;">
+                            <img src="src/img/ACM-logo.png" alt="ACM" width="240" hspace="10"></a><br>
+                        <a href="http://www.sigmm.org/" target="_blank"
+                           style="text-decoration: none !important; border: 0 !important;">
+                            <img src="src/img/sigmm.png" alt="SIGMM" width="240" hspace="10">
+                        </a>
+                        <a  target="_blank"
+                            style="text-decoration: none !important; border: 0 !important;">
+                            <img src="src/img/jjh.png" alt="南京京君海网络科技有限公司" width="240" hspace="10">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer class="footer" role="contentinfo">
+
+        <div id="inner-footer" class="wrap cf">
+
+            <nav role="navigation">
+            </nav>
+
+            <p class="source-org copyright">© 2019 ACM Multimedia Asia 2019.&nbsp;
+                &nbsp;
+                &nbsp;
+            </p>
+
+        </div>
+
+
+    </footer>
+
+</div>
+
+<script type="text/javascript" src="src/js/scripts.js"></script>
+<script type="text/javascript" src="src/js/wp-embed.min.js"></script>
+
+
+<!-- end of site. what a ride! -->
+<div id="cboxOverlay" style="display: none;"></div>
+<div id="colorbox" class="" role="dialog" tabindex="-1" style="display: none;">
+    <div id="cboxWrapper">
+        <div>
+            <div id="cboxTopLeft" style="float: left;"></div>
+            <div id="cboxTopCenter" style="float: left;"></div>
+            <div id="cboxTopRight" style="float: left;"></div>
+        </div>
+        <div style="clear: left;">
+            <div id="cboxMiddleLeft" style="float: left;"></div>
+            <div id="cboxContent" style="float: left;">
+                <div id="cboxTitle" style="float: left;"></div>
+                <div id="cboxCurrent" style="float: left;"></div>
+                <button type="button" id="cboxPrevious"></button>
+                <button type="button" id="cboxNext"></button>
+                <button type="button" id="cboxSlideshow"></button>
+                <div id="cboxLoadingOverlay" style="float: left;"></div>
+                <div id="cboxLoadingGraphic" style="float: left;"></div>
+            </div>
+            <div id="cboxMiddleRight" style="float: left;"></div>
+        </div>
+        <div style="clear: left;">
+            <div id="cboxBottomLeft" style="float: left;"></div>
+            <div id="cboxBottomCenter" style="float: left;"></div>
+            <div id="cboxBottomRight" style="float: left;"></div>
+        </div>
+    </div>
+    <div style="position: absolute; width: 9999px; visibility: hidden; display: none; max-width: none;"></div>
+</div>
+</body>
+
