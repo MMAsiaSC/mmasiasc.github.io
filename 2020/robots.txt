@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /bni-proposals.html
+Allow: /call-for-paper.html
+Allow: /committee.html
+Allow: /conference-venue.html
+Allow: /demo-video-proposals.html
+Allow: /doctoral-symposium.html
+Allow: /important-dates.html
+Allow: /multimedia-grand-challenge.html
+Allow: /panel-proposals.html
+Allow: /program.html
+Allow: /sponsorship.html
+Allow: /tutorial-proposals.html
+Allow: /workshop-proposals.html
+Disallow: /asset/images/background/
+Disallow: /asset/images/sponsors/
+Disallow: /asset/images/chairs-new/
+Disallow: /404.html
+Disallow: /.git
+Disallow: /.gitignore
+Disallow: /README.md
+
+Sitemap: https://mmasia2020.org/sitemap.xml
+
