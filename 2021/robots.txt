@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://www.acmmmasia.org/2021/sitemap/sitemap-index.xml
-Host: https://www.acmmmasia.org
