@@ -10,7 +10,8 @@
     <link rel="canonical" href="https://acmmmasia.org">
     <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sidebars/"> -->
     <!-- Bootstrap core CSS -->
-    <link href="MMAsia_New/assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="MMAsia_New/assets/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="./dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
       .bd-placeholder-img {
@@ -26,46 +27,32 @@
           font-size: 3.5rem;
         }
       }
-      .myactive{
-        background-color:red;
-        color:red;
+
+      @media (max-width: 1500px) {
+        #side {
+          display: none;
+        }
       }
+      
       .img-circle{
         border-radius:50%;
         width: 120px;
         height: 120px;
       }
 
-      .confer_li {
-/*           font-size: 13px; */
-          /* margin: 1px; */
-          margin-left: 10px;
-          text-decoration: none;
-      }
-
-      a{
+      .container a{
         text-decoration: none;
-        color:royalblue;
+        color: #337ab7;
       }
 
       .myBlock {
         margin-top: 40px;
       }
 
-      p{
-/*         font-size:13px;  */
-        padding: 0px 0px 0px 20px;
+      .myactive{
+        background-color:#e5e5e5;
       }
-      
-      #headImages h4{
-        margin-top: 10px;
-/*         font-size: 15px; */
-      }
-      
-      #headImages p{
-/*         font-size: 10px; */
-        margin-bottom: 5px;
-      }
+
 
     </style>
     <!-- Custom styles for this template -->
@@ -74,401 +61,440 @@
   </head>
   
 <body>
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <symbol id="bootstrap" viewBox="0 0 118 94">
+      <title>Bootstrap</title>
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
+    </symbol>
+    <symbol id="home" viewBox="0 0 16 16">
+      <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+    </symbol>
+    <symbol id="speedometer2" viewBox="0 0 16 16">
+      <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
+    </symbol>
+    <symbol id="table" viewBox="0 0 16 16">
+      <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
+    </symbol>
+    <symbol id="people-circle" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+    </symbol>
+    <symbol id="grid" viewBox="0 0 16 16">
+      <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+    </symbol>
+    <symbol id="collection" viewBox="0 0 16 16">
+      <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
+    </symbol>
+    <symbol id="calendar3" viewBox="0 0 16 16">
+      <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
+      <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+    </symbol>
+    <symbol id="chat-quote-fill" viewBox="0 0 16 16">
+      <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
+    </symbol>
+    <symbol id="cpu-fill" viewBox="0 0 16 16">
+      <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
+      <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
+    </symbol>
+    <symbol id="gear-fill" viewBox="0 0 16 16">
+      <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
+    </symbol>
+    <symbol id="speedometer" viewBox="0 0 16 16">
+      <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+      <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+    </symbol>
+    <symbol id="toggles2" viewBox="0 0 16 16">
+      <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
+      <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
+      <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
+    </symbol>
+    <symbol id="tools" viewBox="0 0 16 16">
+      <path d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
+    </symbol>
+    <symbol id="chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </symbol>
+    <symbol id="geo-fill" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
+    </symbol>
+  </svg>
 
-  <header style="padding-top: 20px;">
-      <h4 style="text-align: center;"><b>ACM Multimedia Asia Conference (MM Asia)</b></h4>
-      <h6 style="text-align: center;"> Steering Committee Homepage </h6>
-      <h6 style="text-align: center;"> www.acmmmasia.org</h6>
+
+  <div style="font-size:110%" id="home">
+  <header>
+      <h2 style="text-align: center;"><b>ACM Multimedia Asia Conference (MM Asia)</b></h2>
+      <h4 style="text-align: center;"> Steering Committee Homepage </h4>
+      <h4 style="text-align: center;"> www.acmmmasia.org</h4>
   </header>
-
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol id="bootstrap" viewBox="0 0 118 94">
-    <title>Bootstrap</title>
-    <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-  </symbol>
-  <symbol id="home" viewBox="0 0 16 16">
-    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
-  </symbol>
-  <symbol id="speedometer2" viewBox="0 0 16 16">
-    <path d="M8 4a.5.5 0 0 1 .5.5V6a.5.5 0 0 1-1 0V4.5A.5.5 0 0 1 8 4zM3.732 5.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 10a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 10zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 9.31a.91.91 0 1 0 1.302 1.258l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
-    <path fill-rule="evenodd" d="M0 10a8 8 0 1 1 15.547 2.661c-.442 1.253-1.845 1.602-2.932 1.25C11.309 13.488 9.475 13 8 13c-1.474 0-3.31.488-4.615.911-1.087.352-2.49.003-2.932-1.25A7.988 7.988 0 0 1 0 10zm8-7a7 7 0 0 0-6.603 9.329c.203.575.923.876 1.68.63C4.397 12.533 6.358 12 8 12s3.604.532 4.923.96c.757.245 1.477-.056 1.68-.631A7 7 0 0 0 8 3z"/>
-  </symbol>
-  <symbol id="table" viewBox="0 0 16 16">
-    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2zm15 2h-4v3h4V4zm0 4h-4v3h4V8zm0 4h-4v3h3a1 1 0 0 0 1-1v-2zm-5 3v-3H6v3h4zm-5 0v-3H1v2a1 1 0 0 0 1 1h3zm-4-4h4V8H1v3zm0-4h4V4H1v3zm5-3v3h4V4H6zm4 4H6v3h4V8z"/>
-  </symbol>
-  <symbol id="people-circle" viewBox="0 0 16 16">
-    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-  </symbol>
-  <symbol id="grid" viewBox="0 0 16 16">
-    <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h3A1.5 1.5 0 0 1 7 2.5v3A1.5 1.5 0 0 1 5.5 7h-3A1.5 1.5 0 0 1 1 5.5v-3zM2.5 2a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 1h3A1.5 1.5 0 0 1 15 2.5v3A1.5 1.5 0 0 1 13.5 7h-3A1.5 1.5 0 0 1 9 5.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zM1 10.5A1.5 1.5 0 0 1 2.5 9h3A1.5 1.5 0 0 1 7 10.5v3A1.5 1.5 0 0 1 5.5 15h-3A1.5 1.5 0 0 1 1 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3zm6.5.5A1.5 1.5 0 0 1 10.5 9h3a1.5 1.5 0 0 1 1.5 1.5v3a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 13.5v-3zm1.5-.5a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-  </symbol>
-  <symbol id="collection" viewBox="0 0 16 16">
-    <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-11zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1h-7zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6v7zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-13z"/>
-  </symbol>
-  <symbol id="calendar3" viewBox="0 0 16 16">
-    <path d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z"/>
-    <path d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-  </symbol>
-  <symbol id="chat-quote-fill" viewBox="0 0 16 16">
-    <path d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM7.194 6.766a1.688 1.688 0 0 0-.227-.272 1.467 1.467 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 5.734 6C4.776 6 4 6.746 4 7.667c0 .92.776 1.666 1.734 1.666.343 0 .662-.095.931-.26-.137.389-.39.804-.81 1.22a.405.405 0 0 0 .011.59c.173.16.447.155.614-.01 1.334-1.329 1.37-2.758.941-3.706a2.461 2.461 0 0 0-.227-.4zM11 9.073c-.136.389-.39.804-.81 1.22a.405.405 0 0 0 .012.59c.172.16.446.155.613-.01 1.334-1.329 1.37-2.758.942-3.706a2.466 2.466 0 0 0-.228-.4 1.686 1.686 0 0 0-.227-.273 1.466 1.466 0 0 0-.469-.324l-.008-.004A1.785 1.785 0 0 0 10.07 6c-.957 0-1.734.746-1.734 1.667 0 .92.777 1.666 1.734 1.666.343 0 .662-.095.931-.26z"/>
-  </symbol>
-  <symbol id="cpu-fill" viewBox="0 0 16 16">
-    <path d="M6.5 6a.5.5 0 0 0-.5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 0-.5-.5h-3z"/>
-    <path d="M5.5.5a.5.5 0 0 0-1 0V2A2.5 2.5 0 0 0 2 4.5H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2v1H.5a.5.5 0 0 0 0 1H2A2.5 2.5 0 0 0 4.5 14v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14h1v1.5a.5.5 0 0 0 1 0V14a2.5 2.5 0 0 0 2.5-2.5h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14v-1h1.5a.5.5 0 0 0 0-1H14A2.5 2.5 0 0 0 11.5 2V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5a.5.5 0 0 0-1 0V2h-1V.5zm1 4.5h3A1.5 1.5 0 0 1 11 6.5v3A1.5 1.5 0 0 1 9.5 11h-3A1.5 1.5 0 0 1 5 9.5v-3A1.5 1.5 0 0 1 6.5 5z"/>
-  </symbol>
-  <symbol id="gear-fill" viewBox="0 0 16 16">
-    <path d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"/>
-  </symbol>
-  <symbol id="speedometer" viewBox="0 0 16 16">
-    <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
-    <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
-  </symbol>
-  <symbol id="toggles2" viewBox="0 0 16 16">
-    <path d="M9.465 10H12a2 2 0 1 1 0 4H9.465c.34-.588.535-1.271.535-2 0-.729-.195-1.412-.535-2z"/>
-    <path d="M6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm.535-10a3.975 3.975 0 0 1-.409-1H4a1 1 0 0 1 0-2h2.126c.091-.355.23-.69.41-1H4a2 2 0 1 0 0 4h2.535z"/>
-    <path d="M14 4a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"/>
-  </symbol>
-  <symbol id="tools" viewBox="0 0 16 16">
-    <path d="M1 0L0 1l2.2 3.081a1 1 0 0 0 .815.419h.07a1 1 0 0 1 .708.293l2.675 2.675-2.617 2.654A3.003 3.003 0 0 0 0 13a3 3 0 1 0 5.878-.851l2.654-2.617.968.968-.305.914a1 1 0 0 0 .242 1.023l3.356 3.356a1 1 0 0 0 1.414 0l1.586-1.586a1 1 0 0 0 0-1.414l-3.356-3.356a1 1 0 0 0-1.023-.242L10.5 9.5l-.96-.96 2.68-2.643A3.005 3.005 0 0 0 16 3c0-.269-.035-.53-.102-.777l-2.14 2.141L12 4l-.364-1.757L13.777.102a3 3 0 0 0-3.675 3.68L7.462 6.46 4.793 3.793a1 1 0 0 1-.293-.707v-.071a1 1 0 0 0-.419-.814L1 0zm9.646 10.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708zM3 11l.471.242.529.026.287.445.445.287.026.529L5 13l-.242.471-.026.529-.445.287-.287.445-.529.026L3 15l-.471-.242L2 14.732l-.287-.445L1.268 14l-.026-.529L1 13l.242-.471.026-.529.445-.287.287-.445.529-.026L3 11z"/>
-  </symbol>
-  <symbol id="chevron-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-  </symbol>
-  <symbol id="geo-fill" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.319 1.319 0 0 0-.37.265.301.301 0 0 0-.057.09V14l.002.008a.147.147 0 0 0 .016.033.617.617 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.619.619 0 0 0 .146-.15.148.148 0 0 0 .015-.033L12 14v-.004a.301.301 0 0 0-.057-.09 1.318 1.318 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465-1.281 0-2.462-.172-3.34-.465-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411z"/>
-  </symbol>
-</svg>
+  </div>
 
 
-<div id="myDIV" class="bg-white" style="width: 200px;position: sticky; display: flex;top: 0px;float: left;margin-top: 40px;padding-left: 10px;padding-right: 0px;">
-
-  <ul class="list-unstyled ps-0 nav nav-pills flex-column mb-auto">
+<div id="myDIV" style="position: sticky; display: flex;top: 0px; float: left; width: 12%; margin-left: 5%;margin-top: 2.5%;">
+<div style="font-size: large;" id="side">
+  <ul class="list-unstyled nav flex-column mb-auto">
     <li>
-        <a href="#news" class="nav-link text-dark mybtn myactive" aria-current="page">
+        <a href="javascript:window.scrollTo( 0, 0 );" class="nav-link text-dark mybtn myactive" aria-current="page" style="padding-right: 0px; color:gray;">
           <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
           Home
         </a>
     </li>
    
     <li>
-      <a class="nav-link text-dark mybtn" style="padding-right: 0px;">
+      <a href="#conference" class="nav-link text-dark mybtn" style="padding-right: 0px; color:gray;">
       <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
-      <button class="rounded text-dark" style="border: none;background-color: none; padding: 0px;background: transparent;" data-bs-toggle="collapse" data-bs-target="#people-collapse" aria-expanded="true">
         Conferences
       </button>
       </a>
-      <div class="collapse show" id="people-collapse">
+      <div class="collapse show" id="people-collapse" style="margin-left: 10%;">
         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-          <li><a style="color:gray;" href="https://www.mmasia2022.org/">MM Asia 2022</a></li>
-          <li><a style="color: gray;" href="https://mmasia2021.uqcloud.net/">MM Asia 2021</a></li>
-          <li><a style="color: gray;" href="http://www.acmmmasia.org/2020/">MM Asia 2020</a></li>
-          <li><a style="color: gray;" href="http://www.acmmmasia.org/2019/">MM Asia 2019</a></li>
+          <li><a  href="https://www.mmasia2022.org/">MM Asia 2022</a></li>
+          <li><a  href="http://www.acmmmasia.org/2021/">MM Asia 2021</a></li>
+          <li><a  href="http://www.acmmmasia.org/2020/">MM Asia 2020</a></li>
+          <li><a  href="http://www.acmmmasia.org/2019/">MM Asia 2019</a></li>
         </ul>
       </div>
     </li>
 
     <li>
-      <a href="#people" class="nav-link text-dark mybtn" style="padding-right: 0px;" aria-current="page" >
+      <a href="#people" class="nav-link text-dark mybtn"  aria-current="page" style="padding-right: 0px; color:gray;">
         <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
         Steering Committee
       </a>
   </li>
 
   </ul>
+
+</div>
 </div>
 
-<div style="padding: 0px;margin-left: 180px;margin-top: 40px;margin-right: 100px;">
 
-    <div class="" style="padding:10px 40px 0px 40px; margin: 0px;">
-      <div id="news" class="">
-      <h1 class="display-5 fw-bold" style="font-size: 15px;padding: 0px 0px 0px 20px;">News</h1>
+<div class="container">
+  <div  style="margin-top: 4%;">
+  <div class="row">
+    <div class="span12" style="font-size:110%" id="news">
+
+      <h4 align="left"><b>News</b></h4>
       <ul>
-            <li class="confer_li">Mar 28, 2021: <a href="./Invitation to Host ACM Multimedia Asia 2023.pdf">Call for proposal of hosting ACM Multimedia Asia 2023</a>. (Deadline: May 31, 2021)</li>		
-            <li class="confer_li">Mar 24, 2021: The 4th ACM Multimedia Asia conference (<a href="./MMAsia2022bidding-TokyoPlan-CFP.pdf">CFP</a>) will be held in Tokyo, Japan, in December 2022.</li>
-            <li class="confer_li">May 06, 2020: <a href="conf_guideline.html">The guideline for organizing ACM Multimedia Asia conference</a> is published.</li>
-            <li class="confer_li">Apr 12, 2020: <a href="https://mmasia2021.uqcloud.net/">The third ACM Multimedia Asia conference (2021)</a> will be held in Gold Coast, Australia, in December 2021.</li>
-            <li class="confer_li">Mar 15, 2020: <a href="./Invitation to Host ACM Multimedia Asia 2022 Conference.pdf">Call for proposal of hosting ACM Multimedia Asia 2022</a>. (Deadline: May 31, 2020)</li>
-            <li class="confer_li">Mar 09, 2020: <a href="./cfo2021-2022.pdf">Call for proposal of hosting ACM Multimedia Asia 2021 & 2022.</a></li>
-            <li class="confer_li">Jan 10, 2020: <a href="https://mmasia2020.org/">The second ACM Multimedia Asia conference (2020)</a> will be held in Singapore, in December 2020.</li>
-            <li class="confer_li">Dec 20, 2019: <a href="http://www.acmmmasia.org/2019/">The first ACM Multimedia Asia (2019)</a> conference was successfully organized in Beijing, China, in 16-18 December, 2019.</li>
-            <li class="confer_li">Oct 31, 2017: SIGMM approves MM Asia proposal at ACM Multimedia, October 2017.</li>
+<li>Mar 28, 2021: <a href="./Invitation to Host ACM Multimedia Asia 2023.pdf">Call for proposal of hosting ACM Multimedia Asia 2023</a>. (Deadline: May 31, 2021)</li>		
+<li>Mar 24, 2021: The 4th ACM Multimedia Asia conference (<a href="./MMAsia2022bidding-TokyoPlan-CFP.pdf">CFP</a>) will be held in Tokyo, Japan, in December 2022.</li>
+<li>May 06, 2020: <a href="conf_guideline.html">The guideline for organizing ACM Multimedia Asia conference</a> is published.</li>
+<li>Apr 12, 2020: <a href="https://mmasia2021.uqcloud.net/">The third ACM Multimedia Asia conference (2021)</a> will be held in Gold Coast, Australia, in December 2021.</li>
+        <li>Mar 15, 2020: <a href="./Invitation to Host ACM Multimedia Asia 2022 Conference.pdf">Call for proposal of hosting ACM Multimedia Asia 2022</a>. (Deadline: May 31, 2020)</li>
+        <li>Mar 09, 2020: <a href="./cfo2021-2022.pdf">Call for proposal of hosting ACM Multimedia Asia 2021 & 2022.</a></li>
+        <li>Jan 10, 2020: <a href="https://mmasia2020.org/">The second ACM Multimedia Asia conference (2020)</a> will be held in Singapore, in December 2020.</li>
+        <li>Dec 20, 2019: <a href="http://www.acmmmasia.org/2019/">The first ACM Multimedia Asia (2019)</a> conference was successfully organized in Beijing, China, in 16-18 December, 2019.</li>
+        <li>Oct 31, 2017: SIGMM approves MM Asia proposal at ACM Multimedia, October 2017.</li>
       </ul>
+      <br/>
+
+
+
+      <h4 align="left" id="conference"><b>Conferences</b></h4>
+      <ul>
+<li><a href="https://www.mmasia2022.org/">ACM Multimedia Asia 2022</a>, Tokyo, Japan</li>
+<li><a href="https://mmasia2021.uqcloud.net/">ACM Multimedia Asia 2021</a>, 1 - 3 December 2021, Gold Coast, Australia</li>
+        <li><a href="http://www.acmmmasia.org/2020/">ACM Multimedia Asia 2020</a>, 7 - 9 March 2021, Singapore (Virtual)</li>
+        <li><a href="http://www.acmmmasia.org/2019/">ACM Multimedia Asia 2019</a>, 16 - 18 December 2019, Beijing, China</li>
+      </ul>
+
+
+
+      <hr/>
+
+
+      <h4 align="left"> <b>Goals & Missions</b></h4>
+      <p><b>ACM International Conference on Multimedia in Asia</b> (MM Asia) is a newly established international conference to showcase the scientific achievements and industrial innovations in the multimedia field. MM Asia is organized by SIGMM China Chapter and sponsored by SIGMM. Its mission is to illuminate the state of the art in multimedia computing by bringing together researchers and practitioners in this field. It is essential to ensure that the conference includes sessions for presenting high-quality research papers and for sharing practitioner experience.</p>
+      <br/>
+
+
+
+      <h4 align="left"> <b>Conference Date</b></h4>
+      <p>The targeted submission deadline would be middle of July (in coordination with ACM Multimedia and ACM ICMR), and opening date would be December or January.</p>
+      <br/>
+
+
+      <h4 align="left"> <b>Conference Location</b></h4>
+      <p>As China has the largest multimedia community in Asia, we propose to rotate the locations in a 3-year window including Asian countries and Australia.</p>
+      <br/>
+
+
+
+      <h4 align="left"> <b>Paper Review</b></h4>
+      <p>MM Asia conference will maintain the consistent review criteria (double-blinded review similar as ACMMM), consistent acceptance rate (usually around 30%), as well as international organizing and technical program committees.</p>
+      <br/>
+
+
+      <h4 align="left"> <b>Conference Finance</b></h4>
+      <p>SIGMM will officially sponsor the MM Asia Conference. SIGMM China Chapter will coordinate the conference organizations.</p>
+      <br/>
+
+
+      <h4 align="left"> <b>Conference Review</b></h4>
+      <p>SIGMM China Chapter will prepare annual reports of the MM Asia conferences and submit to SIGMM Steering Committee for review. MM Asia is expected to maintain excellent paper quality, professional reputation and financial status. A major review and decision on whether to continue the sponsorship will be made after the 3rd year.</p>
+      <br/>
+
+
+<h4 align="left"> <b>Organzing Conference Guideline</b></h4>
+<p>Please check out <a href="https://www.acmmmasia.org/conf_guideline.html">this link</a> for the guideline of organizing ACM Multimedia Asia Conference.</p>
+<br/>
+
+
+      <h4 align="left" id="people"> <b>Steering Committee</b></h4>
+      <p>The steering committee will consist of experts in Asia and a few active and experienced researchers from <a href="http://www.sigmm.org">SIGMM</a> and Europe/America. The Steering Committee members will be re-elected with respect to the change of the corresponding positions or replaced by the selected general chairs of conferences in a window of around three years.</p>
+
+
+
+  <br/>
+
+
+
+  <div class="row">
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/tmei-2018-3.jpg" width="140" height="140">
+        <h4>Tao Mei *</h4>
+        <p>SIGMM China Chapter Conference Director</p>
+        <p>JD.COM, China</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/csxu2.jpg" width="140" height="140">
+        <h4>Changsheng Xu *</h4>
+        <p>SIGMM China Chapter Chair <br>PCM SC Vice Chair, MMSJ EiC </p>
+        <p>Chinese Academy of Sciences, China</p>
       </div>
       
-      <div  id="conference" class="myBlock">
-        <div  style="margin: 0px;">
-          <h1 class="display-5 fw-bold" style="font-size: 15px;padding: 0px 0px 0px 20px;">Conferences</h1>
-          <ul>
-              <li class="confer_li"><a href="https://www.mmasia2022.org/">ACM Multimedia Asia 2022</a>, Tokyo, Japan</li>
-              <li class="confer_li"><a href="https://mmasia2021.uqcloud.net/">ACM Multimedia Asia 2021</a>, 1 - 3 December 2021, Gold Coast, Australia</li>
-              <li class="confer_li"><a href="http://www.acmmmasia.org/2020/">ACM Multimedia Asia 2020</a>, 7 - 9 March 2021, Singapore (Virtual)</li>
-              <li class="confer_li"><a href="http://www.acmmmasia.org/2019/">ACM Multimedia Asia 2019</a>, 16 - 18 December 2019, Beijing, China</li>
-          </ul>
-        </div>
-        </div>
-          
-      <div id="goals" class="myBlock">
-            <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Goals & Missions</h1>
-            <p style="font-size:13px; padding: 0px 0px 0px 20px;"><b>ACM International Conference on Multimedia in Asia</b> (MM Asia) is a newly established international conference to showcase the scientific achievements and industrial innovations in the multimedia field. MM Asia is organized by SIGMM China Chapter and sponsored by SIGMM. Its mission is to illuminate the state of the art in multimedia computing by bringing together researchers and practitioners in this field. It is essential to ensure that the conference includes sessions for presenting high-quality research papers and for sharing practitioner experience.</p>
-            
+      
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Alberto.jpg" width="140" height="140">
+        <h4>Alberto Del Bimbo</h4>
+        <p>SIGMM Chair</p>
+        <p>University of Florence, Italy</p>
       </div>
       
-      <div id="date" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Conference Date</h1>
-        <p style="font-size:13px; padding: 0px 0px 0px 20px;">The targeted submission deadline would be middle of July (in coordination with ACM Multimedia and ACM ICMR), and opening date would be December or January.</p>
-        
-      </div>
-
-      <div id="location" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Conference Location</h1>
-        <p style="font-size:13px; padding: 0px 0px 0px 20px;">As China has the largest multimedia community in Asia, we propose to rotate the locations in a 3-year window including Asian countries and Australia.</p>
-      </div>
-
-      <div id="paper" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Paper Review</h1>
-        <p style="font-size:13px; padding: 0px 0px 0px 20px;">MM Asia conference will maintain the consistent review criteria (double-blinded review similar as ACMMM), consistent acceptance rate (usually around 30%), as well as international organizing and technical program committees.</p>
-      </div>
-
-      <div id="conf-review" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Conference Review</h1>
-        <p style="font-size:13px; padding: 0px 0px 0px 20px;">SIGMM China Chapter will prepare annual reports of the MM Asia conferences and submit to SIGMM Steering Committee for review. MM Asia is expected to maintain excellent paper quality, professional reputation and financial status. A major review and decision on whether to continue the sponsorship will be made after the 3rd year.</p>
-      </div>
-
-      <div id="finance" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Conference Finance</h1>
-        <p style="font-size:13px; padding: 0px 0px 0px 20px;">SIGMM will officially sponsor the MM Asia Conference. SIGMM China Chapter will coordinate the conference organizations.</p>
-      </div>
-
-      <div id="organzing" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px; padding: 0px 0px 0px 20px;">Conference Organzing Guideline</h1>
-        <p style="font-size:13px; padding: 0px 0px 0px 20px;">Please check out <a href="https://www.acmmmasia.org/conf_guideline.html">this link</a> for the guideline of organizing ACM Multimedia Asia Conference.</p>
-      </div>
       
-      <div id="people" class="myBlock">
-        <h1 class="display-5 fw-bold" style="font-size: 15px;padding: 0px 0px 0px 20px;"><b>Steering Committee</b></h1>
-              <p>The steering committee will consist of experts in Asia and a few active and experienced researchers from <a href="http://www.sigmm.org">SIGMM</a> and Europe/America. The Steering Committee members will be re-elected with respect to the change of the corresponding positions or replaced by the selected general chairs of conferences in a window of around three years.</p>
-              <br/>
-        
-          <div id="headImages">
-    
-          <div class="row">
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/tmei-2018-3.jpg" width="140" height="140">
-                <h4>Tao Mei *</h4>
-                <p>SIGMM China Chapter Conference Director</p>
-                <p>JD.COM, China</p>
-              </div>
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/csxu2.jpg" width="140" height="140">
-                <h4>Changsheng Xu *</h4>
-                <p>SIGMM China Chapter Chair <br>PCM SC Vice Chair, MMSJ EiC </p>
-                <p>Chinese Academy of Sciences, China</p>
-              </div>
-              
-              
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Alberto.jpg" width="140" height="140">
-                <h4>Alberto Del Bimbo</h4>
-                <p>SIGMM Chair</p>
-                <p>University of Florence, Italy</p>
-              </div>
-              
-              
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Miriam.jpg" width="140" height="140">
-                <h4>Miriam Redi</h4>
-                <p>SIGMM Conference Director</p>
-                <p>Wikimedia Foundation</p>
-              </div>
-    
-              
-            </div>
-    
-    
-              <br/>
-    
-          <div class="row">
-          
-          <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/abed.jpg" width="120" height="120">
-                <h4>Abdulmotaleb El Saddik</h4>
-                <p>ToMM EiC</p>
-                <p>University of Ottawa, Canada</p>
-              </div>
-                       
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Jiebo.jpg" width="140" height="140">
-                <h4>Jiebo Luo</h4>
-                <p>TMM EiC</p>
-                <p>University of Rochester, US</p>
-              </div>
-    
-              
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Lingguan.jpg" width="140" height="140">
-                <h4>Ling Guan</h4>
-                <p>PCM Steering Committee Chair</p>
-                <p>Ryerson University, Canada</p>
-                </div>
-                
-                
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Yong.jpg" width="140" height="140">
-                <h4>Yong Rui</h4>
-                <p>CN representative</p>
-                <p>Lenovo Research, China</p>
-              </div>
-                
-              
-            </div>
-            
-            <br/>
-    
-    
-            <div class="row">
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Rita.jpg" width="140" height="140">
-                <h4>Rita Cucchiara</h4>
-                <p>EU representative</p>
-                <p>Università di Modena e Reggio Emilia, Italy</p>
-              </div>
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Klara.png" width="140" height="140">
-                <h4>Klara Nahrstedt</h4>
-                <p>US representative</p>
-                <p>University of Illinois at Urbana–Champaign, USA</p>
-              </div>
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Chua.jpg" width="140" height="140">
-                <h4>Tat-Seng Chua</h4>
-                <p>SG representative</p>
-                <p>National University of Singapore, Singapore</p>
-              </div>
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Lexing.jpg" width="140" height="140">
-                <h4>Lexing Xie</h4>
-                <p>AU representative</p>
-                <p>Australian National University, Australia</p>
-              </div>
-            </div>
-    
-            <br/>
-    
-    
-            <div class="row">
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Byun.jpg" width="140" height="140">
-                <h4>Hyeran Byun</h4>
-                <p>KR representative</p>
-                <p>Yonsei University, Korea</p>
-              </div>
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Aizawa.jpg" width="140" height="140">
-                <h4>Kiyoharu Aizawa</h4>
-                <p>JP representative</p>
-                <p>The University of Tokyo, Japan</p>
-              </div>
-    
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/Wenhuang.jpg" width="140" height="140">
-                <h4>Wen-Huang Cheng</h4>
-                <p>TW representative</p>
-                <p>National Yang Ming Chiao Tung University, Taiwan</p>
-              </div>
-              
-              
-              <div class="col-md-3" align="center">
-          <img class="img-circle" src="./photo/changwen.jpg" width="140" height="140">
-                <h4>Chang-Wen Chen</h4>
-                <p>HK representative</p>
-                <p>The Hong Kong Polytechnic University</p>
-        </div>
-        </div>
-        
-        <br/>
-            <p>* Tao Mei and Changsheng Xu act as the Steering Committee Co-Chairs.</p>
-        
-        
-      <hr>
-              <h1 class="display-5 fw-bold" style="font-size: 15px;padding: 0px 0px 0px 20px;margin-bottom: 10px;"><b>Former SC Members</b></h1>
-              
-              <div class="row" align="center">
-        <div class="col-md-3" align="center">
-        <img class="img-circle" src="./photo/Alan.jpg" width="140" height="140">
-                <h4>Alan Smeaton</h4>
-                <p>Former SIGMM Chair</p>
-                <p>Dublin City University, Ireland</p>
-          </div>
-          
-          
-        <div class="col-md-3" align="center">
-        <img class="img-circle" src="./photo/Ngo.jpg" width="140" height="140">
-                <h4>Chong-Wah Ngo</h4>
-                <p>Former HK representative</p>
-                <p>Singapore Management University, SG</p>
-        </div>
-           
-        <div class="col-md-3" align="center">
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Miriam.jpg" width="140" height="140">
+        <h4>Miriam Redi</h4>
+        <p>SIGMM Conference Director</p>
+        <p>Wikimedia Foundation</p>
+      </div>
+
+      
+      </div>
+
+
+  
+
+
+      <!--<div class="col-md-3" align="center">
         <img class="img-circle" src="./photo/Friedland.jpg" width="140" height="140">
-                <h4>Gerald Friedland</h4>
-                <p>Former SIGMM Conference Director</p>
-                <p>UC Berkeley/Lawrence Livermore National Lab, USA</p>
+        <h4>Gerald Friedland</h4>
+        <p>SIGMM Conference Director</p>
+        <p>UC Berkeley/Lawrence Livermore National Lab, USA</p>
+      </div>
+      </div>-->
+
+
+      <br/>
+
+  <div class="row">
+  
+  <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/abed.jpg" width="140" height="140">
+        <h4>Abdulmotaleb El Saddik</h4>
+        <p>ToMM EiC</p>
+        <p>University of Ottawa, Canada</p>
+      </div>
+               
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Jiebo.jpg" width="140" height="140">
+        <h4>Jiebo Luo</h4>
+        <p>TMM EiC</p>
+        <p>University of Rochester, US</p>
+      </div>
+
+      
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Lingguan.jpg" width="140" height="140">
+        <h4>Ling Guan</h4>
+        <p>PCM Steering Committee Chair</p>
+        <p>Ryerson University, Canada</p>
         </div>
-          
-          
-          
-        <div class="col-md-3" align="center">
-        <img class="img-circle" src="./photo/Thomas.jpg" width="140" height="140">
-                <h4>Thomas Plagemann</h4>
-                <p>Former MMSJ EiC</p>
-                <p>University of Oslo, Norway</p>
-        </div>
-        </div>
-          
-        <div class="row" align="left">
-        <div class="col-md-3" align="center">
-        <img class="img-circle" src="./photo/Wenwuzhu.jpg" width="140" height="140">
-                <h4>Wenwu Zhu</h4>
-                <p>Former TMM EiC</p>
-                <p>Tsinghua University, China</p>
-        </div>
-            
-            
-             </div>
         
-        <hr>
-        <h1 class="display-5 fw-bold" style="font-size: 15px;padding: 0px 0px 0px 20px;margin-bottom: 10px;"><b>Non-voting Members</b></h1>
         
-        <div class="row">
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/qianru.jpg" width="140" height="140">
-                <h4>Qianru Sun</h4>
-                <p>Finance Chair</p>
-                <p>Singapore Management University, SG</p>
-              </div>
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Yong.jpg" width="140" height="140">
+        <h4>Yong Rui</h4>
+        <p>CN representative</p>
+        <p>Lenovo Research, China</p>
+      </div>
+        
+      
+    </div>
     
-              <div class="col-md-3" align="center">
-                <img class="img-circle" src="./photo/wzhang.jpg" width="140" height="140">
-                <h4>Wei Zhang</h4>
-                <p>Secretary</p>
-                <p>JD.com, China</p>
-              </div>
-        </div>
-        
+    
+    
+    
+    
+
+
+    <br/>
+
+
+    <div class="row">
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Rita.jpg" width="140" height="140">
+        <h4>Rita Cucchiara</h4>
+        <p>EU representative</p>
+        <p>Università di Modena e Reggio Emilia, Italy</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Klara.png" width="140" height="140">
+        <h4>Klara Nahrstedt</h4>
+        <p>US representative</p>
+        <p>University of Illinois at Urbana–Champaign, USA</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Chua.jpg" width="140" height="140">
+        <h4>Tat-Seng Chua</h4>
+        <p>SG representative</p>
+        <p>National University of Singapore, Singapore</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Lexing.jpg" width="140" height="140">
+        <h4>Lexing Xie</h4>
+        <p>AU representative</p>
+        <p>Australian National University, Australia</p>
       </div>
     </div>
-    </div>
 
+    <br/>
+
+
+    <div class="row">
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Byun.jpg" width="140" height="140">
+        <h4>Hyeran Byun</h4>
+        <p>KR representative</p>
+        <p>Yonsei University, Korea</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Aizawa.jpg" width="140" height="140">
+        <h4>Kiyoharu Aizawa</h4>
+        <p>JP representative</p>
+        <p>The University of Tokyo, Japan</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/Wenhuang.jpg" width="140" height="140">
+        <h4>Wen-Huang Cheng</h4>
+        <p>TW representative</p>
+        <p>National Yang Ming Chiao Tung University, Taiwan</p>
+      </div>
+      
+      
+      <div class="col-md-3" align="center">
+  <img class="img-circle" src="./photo/changwen.jpg" width="140" height="140">
+        <h4>Chang-Wen Chen</h4>
+        <p>HK representative</p>
+        <p>The Hong Kong Polytechnic University</p>
 </div>
+</div>
+
+<br/>
+    * Tao Mei and Changsheng Xu act as the Steering Committee Co-Chairs.
+
+
+<hr>
+      <p align="left"> <b>Former SC Members</b></p>
+      
+      <div class="row" align="center">
+<div class="col-md-3" align="center">
+<img class="img-circle" src="./photo/Alan.jpg" width="140" height="140">
+        <h4>Alan Smeaton</h4>
+        <p>Former SIGMM Chair</p>
+        <p>Dublin City University, Ireland</p>
+  </div>
+  
+  
+<div class="col-md-3" align="center">
+<img class="img-circle" src="./photo/Ngo.jpg" width="140" height="140">
+        <h4>Chong-Wah Ngo</h4>
+        <p>Former HK representative</p>
+        <p>Singapore Management University, SG</p>
+</div>
+   
+<div class="col-md-3" align="center">
+<img class="img-circle" src="./photo/Friedland.jpg" width="140" height="140">
+        <h4>Gerald Friedland</h4>
+        <p>Former SIGMM Conference Director</p>
+        <p>UC Berkeley/Lawrence Livermore National Lab, USA</p>
+</div>
+  
+  
+  
+<div class="col-md-3" align="center">
+<img class="img-circle" src="./photo/Thomas.jpg" width="140" height="140">
+        <h4>Thomas Plagemann</h4>
+        <p>Former MMSJ EiC</p>
+        <p>University of Oslo, Norway</p>
+</div>
+</div>
+  
+<div class="row" align="left">
+<div class="col-md-3" align="center">
+<img class="img-circle" src="./photo/Wenwuzhu.jpg" width="140" height="140">
+        <h4>Wenwu Zhu</h4>
+        <p>Former TMM EiC</p>
+        <p>Tsinghua University, China</p>
+</div>
+    
+    
+     </div>
+
+<hr>
+<p align="left"> <b>Non-voting Members</b></p>
+
+<div class="row">
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/qianru.jpg" width="140" height="140">
+        <h4>Qianru Sun</h4>
+        <p>Finance Chair</p>
+        <p>Singapore Management University, SG</p>
+      </div>
+
+      <div class="col-md-3" align="center">
+        <img class="img-circle" src="./photo/wzhang.jpg" width="140" height="140">
+        <h4>Wei Zhang</h4>
+        <p>Secretary</p>
+        <p>JD.com, China</p>
+      </div>
+</div>
+
+      
+     
+     <hr>
+      
+      
+    
+
+      <h5 align="center">Last updated in December 2021.</h5><br/>
+
+    </div>
+  </div>
+</div>
+</div> <!--end of continer-->
+
+
+
 <script>
 var header = document.getElementById("myDIV");
   var btns = header.getElementsByClassName("mybtn");
