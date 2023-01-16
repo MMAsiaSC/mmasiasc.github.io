@@ -1,0 +1,336 @@
+/* your styles go here */
+/* Example site test */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+.box-image-text .image {
+    min-height: 190px;
+    max-height: 190px;
+}
+
+.box-image-text .image img {
+    max-height: 190px;
+    margin: auto;
+}
+
+.box-simple {
+    min-height: 230px;
+}
+
+.navbar ul.dropdown-menu li {
+    list-style-type: none;
+    border-bottom: solid 1px #eeeeee;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 4px 0;
+    padding-bottom: 10px;
+    border-bottom: dotted 1px #555555;
+  }
+  .navbar ul.dropdown-menu li a {
+    position: relative;
+    color: #555555;
+    font-size: 14px;
+    font-weight: bold;
+    display: block;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    left: 0;
+  }
+  .navbar ul.dropdown-menu li a:hover {
+    color: var(--primary-accent);
+    text-decoration: none;
+    background: none;
+    left: 2px;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+  @media (max-width: 767px) {
+    .navbar ul.dropdown-menu li a:hover {
+      left: 0;
+    }
+  }
+
+#header{
+    position: relative;/*h1の中央寄せ配置の起点とするためのrelative*/
+    width: 100vw;
+    height: 53vw;/*高さを全画面にあわせる*/
+} 
+
+#video-area{
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url("../img/dreamstime_xxl_87051291.jpg");
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#video {
+    /*天地中央配置*/
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*縦横幅指定*/
+    /*width: 177.77777778vh; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    /*height: 56.25vw; /* 16:9の幅 → 9 ÷ 16 = 56.25% */
+    width: 100%; /* 16:9 の幅→16 ÷ 9＝ 177.77% */
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+#video-area-title{
+    color: #444444;
+    background-color:rgba(255,255,255,.0);
+    font-family: 'Outfit', sans-serif;
+    padding:17vw 0 0 0;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    height:53vw;
+}
+
+#video-area-sub{
+  color: #444444;
+  background-color:rgba(255,255,255,.50);
+  font-family: 'Outfit', sans-serif;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  margin-bottom: 0;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+}
+
+#top-title{
+  font-size: 4vw;
+}
+
+#top-subtitle{
+  font-size: 3vw;
+}
+
+#registration-fee table {
+  background-color: white;
+  border-collapse:collapse
+}
+
+#registration-fee th {
+  background-color: #dddddd;
+  text-align: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+#registration-fee th,td {
+  padding: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+td#registration-timing {
+  background-color: #dddddd;
+  text-align: center;
+}
+
+td#registration-price {
+  text-align: right;
+}
+
+
+h2 {
+  padding-top: 70px;
+  margin-top: -70px;
+}
+
+a#program {
+  pointer-events: none;
+  padding-top: 70px;
+  margin-top: -70px;
+  color:inherit;
+  text-decoration: none;
+}
+
+#program-day {
+  font-size: 18px;
+  color: black;
+}
+
+#program-display-date {
+  font-weight: 900;
+  font-size: 22px;
+  width: 100%;
+  border-bottom: solid black;
+  margin-top: 20px;
+}
+#program-session {
+  display: flex;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+#program-time {
+  display: flex;
+  width: 140px;
+  font-weight: 900;
+}
+#program-session-name {
+  display: flex;
+  font-weight: 900;
+  flex: 1;
+}
+#program-presentatin-list {
+  margin-left: 2em;
+}
+#program-presentation {
+  display: inline;
+}
+#program-paper-id {
+  display: inline-block;
+  width: 25px;
+  height: 15px;
+  border-radius: 2px;
+  text-align: center;
+  font-size: 13px;
+  padding-bottom: 2px;
+  font-weight: 900;
+  font-family: "Lucida Console", "Courier New", monospace;
+  padding-left: 35px;
+}
+#program-paper-title {
+  display: inline-block;
+  text-indent: -40px;
+  padding-left: 40px;
+}
+#program-paper-author {
+  font-size: 14px;
+  margin-left: 40px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #555555
+}
+
+@media screen and (max-width: 480px) {
+  #program-time {
+    font-size: 10px;
+    width: 80px;
+  }
+  #program-session-name {
+    font-weight: 900;
+    font-size: 14px;
+    flex: 1;
+  }
+  #program-paper-id {
+    font-size: 10px;
+    width: 10px;
+    height: 12px;
+    padding-left: 35px;
+  }
+  #program-paper-title {
+    font-size: 14px;
+  }
+  #program-paper-author {
+    font-size: 12px;
+  }
+}
+
+#program-paper-id.oral, #program-glance-session.oral  {
+  background: plum;
+}
+#program-paper-id.short, #program-glance-session.short  {
+  background: lightsalmon;
+}
+#program-paper-id.demo, #program-glance-session.demo {
+  background: palegreen;
+}
+#program-glance-session.workshop {
+  background: skyblue;
+}
+#program-glance-session.opening, #program-glance-session.closing {
+  background: linen;
+}
+#program-glance-session.tutorial {
+  background: skyblue;
+}
+#program-glance-session.keynote {
+  background: pink;
+}
+#program-glance-session.social {
+  background: lightgrey;
+}
+
+#program-at-a-glance {
+  display: flex;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+#program-glance-one-day {
+  width: 25%;
+  height: 720px;
+  background-color: white;
+  border-left: solid #dddddd 1px;
+  margin: 0px;
+  padding: 0px;
+}
+#program-glance-session {
+  width: 25%;
+  border-bottom: solid #dddddd 1px;
+  border-top: solid #dddddd 1px;
+  padding-left: 3px;
+  font-weight: 600;
+  font-size: 12px;
+}
+#program-glance-time {
+  font-size: 10px;
+  margin-bottom: 0px;
+  font-weight: normal;
+  margin-right: 5px;
+}
+#program-glance-day {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-left: 3px;
+}
+
+@media screen and (max-width: 480px) {
+  #program-glance-session {
+    font-size: 10px;
+    line-height: 11px;
+  }
+  #program-glance-day {
+    font-size: 12px;
+  }
+  #program-glance-end-time {
+    display: none;
+  }
+}
+
+.brochure {
+  margin: 30px auto; /* ボックスを中央寄せにする */
+  width:303px; /* ボックスの横幅を指定する */
+  height: 440px; /* ボックスの高さを指定する */
+  background: #ffffff; /* ボックスの背景色を指定する */
+  border:1px solid #000000; /* 境界線を実線で太めに指定する */
+  }
+
+  .background {
+    margin: 30px auto; /* ボックスを中央寄せにする */
+    width:500px; /* ボックスの横幅を指定する */
+    background: #ffffff; /* ボックスの背景色を指定する */
+    border:1px solid #000000; /* 境界線を実線で太めに指定する */
+    }
