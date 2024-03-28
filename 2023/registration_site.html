@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registration Site // ACM Multimedia Asia 2023</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+        <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="assets/css/templatemo.css">
+        <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/solid.min.css">
+        <link rel="stylesheet" href="assets/css/regrlar.min.css">
+        <link rel="stylesheet" href="assets/css/brands.min.css">
+    </head>
+
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="assets/js/menu.js"></script>
+
+
+<body>
+    <div>
+        <!-- Header 在index俢改 -->
+        <nav id="indexmenu"></nav>
+    </div>
+
+    <!-- Registration -->
+    <section class="container py-5">
+        <div class="row text-center pt-1 pb-2">
+            <div class="col-lg-12 m-auto">
+                <h1 class="h1 font-pricolor">Registration Site</h1>
+            </div>
+        </div>
+
+        <h2>Online payment</h2>
+        
+            <form method="post" action="example.php"">
+                <div class="row text-left pt-1 pb-2" style="border: 1px solid #D3D3D3">
+                    <div class="card-body">
+                        <div class="col-lg-12 m-auto">
+    
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="first_name">First Name</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="first_name" name="first_name" class="form-control">
+                                </div>
+                            </div>
+            
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="surname">Surname</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="surname" name="surname" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="email">E-mail</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="email" id="email" name="email" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="affiliation">Affiliation</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="affiliation" name="saffiliation" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <label class="col-md-2" style="font-size: 20px;">Status</label> 
+                                <div class="col-md-10">
+                                    <div >
+                                        <input type="radio" name="status" id="author" value="author"> 
+                                        <label for="author" >Author Registration</label>
+                                    </div> 
+                                    <div >
+                                        <input type="radio" name="status" id="attendance" value="attendance" > 
+                                        <label for="attendance" >Conference Attendance</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="paper_id">Paper Id</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="paper_id" name="paper_id" placeholder="(Please provide your paper id when registering as an author)" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="project_id">Project Id</label>
+                                    <br>
+                                    <span style="font-size: 16px;">(國科會計畫編號)</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="project_id" name="project_id" placeholder="(optional)" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="project_name">Project Name</label>
+                                    <br>
+                                    <span style="font-size: 16px;">(國科會計畫名稱)</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="project_name" name="project_name" placeholder="(optional)" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="member_id">Member Id</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="member_id" name="member_id" placeholder="(optional)" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <label class="col-md-2 col-form-label" style="font-size: 18px;">
+                                Payment Options
+                                </label> 
+                                <div class="col-md-10">
+                                    <div >
+                                        <div>
+                                            <b style="font-size: 20px;">Early (by Nov.1,2023)</b>
+                                        </div> 
+                                        <div>
+                                            <input type="radio" id="identity_type_0" name="identity_type"  value="0"> 
+                                            <label for="identity_type_0" >
+                                                Members : <b > 700 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div>
+                                            <input type="radio" id="identity_type_1" name="identity_type"  value="1"> 
+                                            <label for="identity_type_1" >
+                                                Non-Members : <b > 800 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div >
+                                            <input type="radio" id="identity_type_2" name="identity_type"  value="2"> 
+                                            <label for="identity_type_2" >
+                                                Student Members : <b > 300 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div >
+                                            <input type="radio" id="identity_type_3" name="identity_type"  value="3"> 
+                                            <label for="identity_type_3" >
+                                                Student Non-Members : <b > 400 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <div>
+                                            <br><b style="font-size: 20px;">Standard (After Nov.1,2023)</b>
+                                        </div> 
+                                        <div>
+                                            <input type="radio" id="identity_type_4" name="identity_type" disabled="disabled"  value="4"> 
+                                            <label for="identity_type_4" >
+                                                Members : <b > 800 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div>
+                                            <input type="radio" id="identity_type_5" name="identity_type" disabled="disabled"  value="5"> 
+                                            <label for="identity_type_5" >
+                                                Non-Members : <b > 900 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div >
+                                            <input type="radio" id="identity_type_6" name="identity_type" disabled="disabled"  value="6"> 
+                                            <label for="identity_type_6" >
+                                                Student Members : <b > 300 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div >
+                                            <input type="radio" id="identity_type_7" name="identity_type" disabled="disabled"  value="7"> 
+                                            <label for="identity_type_7" >
+                                                Student Non-Members : <b > 400 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div >
+                                        <div>
+                                            <br><b style="font-size: 20px;">Workshop only (by Nov.1,2023)</b>
+                                        </div> 
+                                        <div>
+                                            <input type="radio" id="identity_type_8" name="identity_type"  value="8"> 
+                                            <label for="identity_type_8" >
+                                                Members : <b > 300 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div>
+                                            <input type="radio" id="identity_type_9" name="identity_type"  value="9"> 
+                                            <label for="identity_type_9" >
+                                                Non-Members : <b > 400 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div >
+                                            <input type="radio" id="identity_type_10" name="identity_type"  value="10"> 
+                                            <label for="identity_type_10" >
+                                                Student Members : <b > 300 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div ><!----> <!----> 
+                                        <div >
+                                            <input type="radio" id="identity_type_11" name="identity_type"  value="11"> 
+                                            <label for="identity_type_11" >
+                                                Student Non-Members : <b > 400 USD</b>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="invoice_heading">Invoice Heading</label>
+                                    <br>
+                                    <span style="font-size: 16px;">(發票抬頭)</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="invoice_heading" name="invoice_heading" placeholder="(optional)" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="invoice_number">Invoice Number</label>
+                                    <br>
+                                    <span style="font-size: 16px;">(統一編號)</span>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="invoice_number" name="invoice_number" placeholder="(optional)" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <label class="col-md-2" style="font-size: 16px;">
+                                Diet
+                                <br>
+                                (飲食習慣)
+                                </label> 
+                                <div class="col-md-10">
+                                    <div >
+                                        <input type="radio" name="status" id="non_vegetarian" value="non_vegetarian" > 
+                                        <label for="non_vegetarian" >Non Vegetarian</label>
+                                    </div> 
+                                    <div >
+                                        <input type="radio" name="status" id="vegetarian" value="vegetarian" > 
+                                        <label for="vegetarian" >Vegetarian</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row text-left pt-1 pb-2" style="padding: 1.5rem;">
+                                <div class="col-md-2">
+                                    <label for="note">Note</label>
+                                </div>
+                                <div class="col-md-10">
+                                    <input type="text" id="note" name="note" placeholder="(optional)" class="form-control">
+                                </div>
+                            </div>
+
+                            <br>
+                            <div class="row text-left pt-1 pb-2 text-center" style="padding: 1.5rem;">
+                                <div class="col text-center">
+                                    <button type="submit" class="btn btn-primary">Start Payment</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        
+    </section>
+
+    
+
+    <!-- Start Footer 由index俢改-->
+    <footer id="indexfooter"></footer>
+
+
+    <script src="assets/js/jquery-3.6.0.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/templatemo.js"></script>
+
+
+</body>
+</html>
